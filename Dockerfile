@@ -7,7 +7,6 @@ RUN rpmkeys --import https://repo.mysql.com/RPM-GPG-KEY-mysql \
   && yum install -y libpwquality \
   && yum install -y iproute \
   && rm -rf /var/cache/yum/*
-RUN mkdir /docker-entrypoint-initdb.d
 
 COPY my.cnf /etc/my.cnf
 
